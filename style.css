@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto:ital,wght@0,300;0,400;1,400;1,500&display=swap');
+
+
+body {
+    background: rgb(2, 0, 36);
+    background-image: radial-gradient(circle, #6139c6 30%, #2a1383 50%, #0e0947 100%);
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.container {
+    background: azure;
+    width: 400px;
+    margin: 100px auto 0;
+    border-radius: 20px;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 30px 0 15px 0;
+}
+
+.heading h1 {
+    font-family: 'Protest Riot', sans-serif;
+    text-transform: capitalize;
+}
+
+.heading img {
+    width: 50px;
+}
+
+
+.search {
+    position: relative;
+    display: flex;
+    margin: 0 20px;
+    column-gap: 10px;
+    text-transform: capitalize;
+}
+
+
+.search input {
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid gray;
+    font-size: 12px;
+    padding: 13px 90px 13px 20px;
+    text-transform: capitalize;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.search button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    text-transform: capitalize;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: none;
+    background:  rgba(255 ,89 ,69,0.9);
+    z-index: 1;
+    font-size: 12px;
+    color: aliceblue;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.search button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    
+}
+
+
+.list_container {
+    list-style: none;
+    padding: 10px 40px;
+    margin: 12px 0;
+}
+
+.list_container li {
+    font-family: 'Protest Riot', sans-serif;
+    font-style: italic;
+    text-transform: capitalize;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.list_container li:hover{
+    cursor: pointer;
+}
+
+
+.list_container li.checked{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.list_container li::before{
+    content: " ";
+    background: url("./images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: -15px;
+}
+
+.list_container li.checked::before{
+    background: url("./images/checked.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.list_container li span{
+    font-family: "Roboto";
+    font-style: normal;
+    position: absolute;
+    right: 0;
+    background: rgba(128, 128, 128,0.2);
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: red;
+    font-weight: bold;
+}
+
+
+.list_container li span:hover{
+    background-color: rgba(128, 128, 128,0.5);
+}
